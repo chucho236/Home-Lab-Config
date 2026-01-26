@@ -1,0 +1,1 @@
+LOG DE INCIDENCIAS - NODO 01 Fecha: 26/01/2026 Analista: chucho236 Evento: Error de conectividad en Capa 1 (Capa Física). Solución: Se conectó cable Ethernet físico. El comando ip a validó la IP 192.168.1.238.
