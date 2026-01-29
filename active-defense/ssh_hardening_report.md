@@ -33,3 +33,11 @@ Se confirmó la operatividad del servicio mediante el comando:
 
 ## 5. Conclusión
 El servidor ahora opera bajo un modelo de **Zero Trust** para accesos SSH, donde el conocimiento de la IP y el puerto no es suficiente para ingresar; se requiere obligatoriamente la posesión de la llave privada física del administrador.
+
+
+## 6. Defensa Activa: Implementación de Fail2Ban
+Para mitigar ataques de fuerza bruta remanentes, se desplegó un Sistema de Prevención de Intrusiones (IPS).
+
+* **Configuración de Cárcel (Jail):** Se creó un archivo `jail.local` monitoreando el puerto personalizado 2222.
+* **Política de Bloqueo:** Tras 3 intentos fallidos en un periodo de 10 minutos, la IP atacante es bloqueada automáticamente por 24 horas.
+* **Comando de Verificación:** `sudo fail2ban-client status sshd`
